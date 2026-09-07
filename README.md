@@ -308,8 +308,8 @@ This tool is for authorized security testing and enterprise threat analysis only
 ## 📧 Support
 
 For issues, questions, or suggestions:
-- GitHub Issues: [Create an issue](https://github.com/yourusername/AlphaShield-AI/issues)
-- Email: support@alphashield.dev
+- GitHub Issues: [Create an issue](https://github.com/musabx17/AlphaShield-Ai/issues)
+- Email: musabahmed1299@gmail.com 
 
 ## 🙏 Acknowledgments
 
