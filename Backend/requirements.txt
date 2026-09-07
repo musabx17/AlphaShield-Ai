@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+joblib
+tldextract
+pydantic
+google-generativeai
+streamlit
+transformers
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+PyMuPDF
+fpdf2
+plotly
+python-dotenv

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 15px;
+      color: #58a6ff;
+    }
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: #238636;
+      color: #fff;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .score {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ef4444;
+      margin: 0;
+    }
+    .verdict {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+    .reasons-box {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      text-align: left;
+      font-size: 11px;
+    }
+    .reasons-title {
+      font-weight: 700;
+      color: #8b949e;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+    .reason-item {
+      color: #f85149;
+      margin: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      line-height: 1.3;
+    }
+    .reason-item.clean {
+      color: #3fb950;
+    }
+    .metrics {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #21262d;
+    }
+    .metric-row:last-child {
+      border-bottom: none;
+    }
+    .btn {
+      width: 100%;
+      background: #1f6beb;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #388bfd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">🛡️ AlphaShield AI</div>
+    <div id="protectionStatus" class="badge">SCANNING</div>
+  </div>
+
+  <div class="card">
+    <div id="riskScore" class="score">--</div>
+    <div id="verdictText" class="verdict">ANALYZING PAGE...</div>
+  </div>
+
+  <!-- Explicit Risk Reasons Container -->
+  <div class="reasons-box">
+    <div class="reasons-title">Detected Risk Factors</div>
+    <div id="reasonsContainer">
+      <div class="reason-item clean">• Extracting telemetry...</div>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric-row">
+      <span>Domain Authority Check:</span>
+      <strong id="domainAuth">--</strong>
+    </div>
+    <div class="metric-row">
+      <span>Script Obfuscation Vector:</span>
+      <strong id="scriptObfuscation">--</strong>
+    </div>
+    <div class="metric-row">
+      <span>Credential Harvesting Risk:</span>
+      <strong id="credentialRisk">--</strong>
+    </div>
+    <div class="metric-row">
+      <span>SSL Security Certificate:</span>
+      <strong id="sslStatus">--</strong>
+    </div>
+  </div>
+
+  <button id="reScanBtn" class="btn">Execute AI Deep Re-Scan</button>
+
+  <script src="Popup.js"></script>
+</body>
+</html>

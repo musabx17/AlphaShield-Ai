@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AlphaShield | Access Blocked</title>
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #f3f4f6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: radial-gradient(circle at 50% 30%, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #ef4444;
+      border-radius: 12px;
+      padding: 32px;
+      max-width: 480px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.25);
+    }
+    .icon { font-size: 48px; margin-bottom: 12px; }
+    h1 { color: #ef4444; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    p { font-size: 14px; color: #9ca3af; line-height: 1.5; margin-bottom: 20px; }
+    .url-box {
+      background: #1f2937;
+      color: #fca5a5;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 12px;
+      word-break: break-all;
+      margin-bottom: 20px;
+      border: 1px dashed #ef4444;
+    }
+    .actions { display: flex; gap: 12px; justify-content: center; }
+    .btn-safe {
+      background: #10b981; color: #fff; padding: 10px 20px; border-radius: 6px;
+      text-decoration: none; font-weight: bold; font-size: 13px;
+    }
+    .btn-bypass {
+      background: transparent; color: #6b7280; padding: 10px 16px; border-radius: 6px;
+      text-decoration: none; font-size: 12px; border: 1px solid #374151;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">🚨</div>
+    <h1>Phishing Attack Blocked</h1>
+    <p>AlphaShield AI Engine detected a malicious domain attempting to execute credential harvesting or unauthorized session hijacking.</p>
+    <div id="targetUrl" class="url-box">Target: Loading...</div>
+    <div class="actions">
+      <a href="about:blank" class="btn-safe">Return to Safety</a>
+      <a id="bypassBtn" href="#" class="btn-bypass">Proceed Anyway (Unsafe)</a>
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const blockedUrl = params.get('url') || 'Unknown Domain';
+    document.getElementById('targetUrl').textContent = `Target: ${blockedUrl}`;
+    document.getElementById('bypassBtn').href = blockedUrl;
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+# Secrets & Environment Files
+.env
+*.env
+env/
+.venv/
+.env.local
+.env.*.local
+
+# Databases & Cache
+*.db
+*.sqlite3
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Local data and uploads
+alphashield.db
+*.sqlite
+uploads/
+temp/
+tmp/
