@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🛡️ AlphaShield AI — Multi-Engine Threat Detection & Telemetry Platform
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
